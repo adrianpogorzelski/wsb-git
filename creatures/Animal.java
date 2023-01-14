@@ -1,6 +1,6 @@
 package creatures;
 
-public abstract class Animal implements Feedable {
+public abstract class Animal implements Feedable, Sellable {
     public static final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
     public static final Double DEFAULT_DOG_WEIGHT = 6.0;
     public static final Double DEFAULT_CAT_WEIGHT = 2.0;
@@ -64,7 +64,6 @@ public abstract class Animal implements Feedable {
         }
     }
 
-
     public void takeForAWalk(Double distance) {
         if (!isAlive) {
             System.out.println("HALO POLICJA!");
@@ -75,6 +74,21 @@ public abstract class Animal implements Feedable {
             } else {
                 System.out.println("dzięki za spacer");
             }
+        }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller.pet instanceof Human) {
+            System.out.println("Zgłaszam do prokuratury");
+        } else if (seller.pet != null && buyer.cash >= price) {
+            buyer.cash -= price;
+            seller.cash += price;
+            buyer.pet = seller.pet;
+            buyer.pet = null;
+            System.out.println(buyer.firstName + " kupuje " + seller.pet.species + " od " + seller.firstName + " za " + price + " zł.");
+        } else {
+            System.out.println("Transakcja niemożliwa");
         }
     }
 }
