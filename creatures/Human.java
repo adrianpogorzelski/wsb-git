@@ -4,6 +4,7 @@ public class Human extends Animal {
     public String firstName;
     public String lastName;
     public Animal pet;
+    public Integer cash;
 
     public Human(String firstName) {
         super("homo sapiens", 50.0);

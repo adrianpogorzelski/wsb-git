@@ -7,4 +7,9 @@ public class LPG extends Car {
         super(id, producer, model, fuelType);
         this.maxPressure = maxPressure;
     }
+
+    @Override
+    public void refuel() {
+        System.out.println("Podłącz... itd.");
+    }
 }

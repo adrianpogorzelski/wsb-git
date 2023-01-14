@@ -1,6 +1,6 @@
 package creatures;
 
-public class Animal {
+public abstract class Animal implements Feedable {
     public static final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
     public static final Double DEFAULT_DOG_WEIGHT = 6.0;
     public static final Double DEFAULT_CAT_WEIGHT = 2.0;
@@ -8,8 +8,8 @@ public class Animal {
 
     public final String species;
     public String name;
-    private Double weight;
-    private Boolean isAlive;
+    protected Double weight;
+    protected Boolean isAlive;
 
 
     public Animal(String species) {
@@ -54,6 +54,16 @@ public class Animal {
             System.out.println("trochę za późno :|");
         }
     }
+
+    public void feed() {
+        if (isAlive) {
+            weight += 1;
+            System.out.println("dzięki za żarcie :) ");
+        } else {
+            System.out.println("trochę za późno :|");
+        }
+    }
+
 
     public void takeForAWalk(Double distance) {
         if (!isAlive) {

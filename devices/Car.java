@@ -1,6 +1,6 @@
 package devices;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     public Double millage;
     public Double engineVolume;
     public String fuelType;
@@ -9,4 +9,5 @@ public class Car extends Device {
         super(id, producer, model);
         this.fuelType = fuelType;
     }
+    public abstract void refuel();
 }

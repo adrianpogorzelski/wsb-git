@@ -7,4 +7,11 @@ public class Electric extends Car {
         super(id, producer, model, fuelType);
         this.voltage = voltage;
     }
+
+    @Override
+    public void refuel() {
+        System.out.println("Podłącz do gniazdka");
+        System.out.println("Czekaj");
+    }
+
 }
