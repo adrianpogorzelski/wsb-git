@@ -1,5 +1,5 @@
 package creatures;
-import devices.Car
+import devices.Car;
 import devices.Phone;
 
 public class Human extends Animal {

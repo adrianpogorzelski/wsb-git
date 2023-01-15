@@ -14,4 +14,8 @@ public class Electric extends Car {
         System.out.println("Czekaj");
     }
 
+    public void turnOn() {
+        System.out.println("...");
+        System.out.println("Ruszamy :)");
+    }
 }

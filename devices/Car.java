@@ -10,4 +10,11 @@ public abstract class Car extends Device {
         this.fuelType = fuelType;
     }
     public abstract void refuel();
+
+    public void turnOn() {
+        System.out.println("brrr...");
+        System.out.println("brrr...");
+        System.out.println("brrr!");
+        System.out.println("JeDzZIEmNY!!!");
+    }
 }

@@ -5,6 +5,8 @@ public abstract class Animal implements Feedable, Sellable {
     public static final Double DEFAULT_DOG_WEIGHT = 6.0;
     public static final Double DEFAULT_CAT_WEIGHT = 2.0;
     public static final Double DEFAULT_HORSE_WEIGHT = 800.0;
+    private static final Double DEFAULT_FOOD_WEIGHT = 1.0;
+    private static final Double DEFAULT_WALK_DISTANCE = 5.0;
 
     public final String species;
     public String name;
@@ -56,12 +58,7 @@ public abstract class Animal implements Feedable, Sellable {
     }
 
     public void feed() {
-        if (isAlive) {
-            weight += 1;
-            System.out.println("dzięki za żarcie :) ");
-        } else {
-            System.out.println("trochę za późno :|");
-        }
+        this.feed(DEFAULT_FOOD_WEIGHT);
     }
 
     public void takeForAWalk(Double distance) {
@@ -75,6 +72,10 @@ public abstract class Animal implements Feedable, Sellable {
                 System.out.println("dzięki za spacer");
             }
         }
+    }
+
+    public void takeForAWalk() {
+        this.takeForAWalk(DEFAULT_WALK_DISTANCE);
     }
 
     @Override

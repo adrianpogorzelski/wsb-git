@@ -17,4 +17,8 @@ public class Petrol extends Car {
         System.out.println("Zapłać");
     }
 
+    public void turnOn() {
+        System.out.println("Przy takich cenach polecam komunikację miejską.");
+    }
+
 }
