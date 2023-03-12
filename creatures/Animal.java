@@ -1,6 +1,6 @@
 package creatures;
 
-public abstract class Animal implements Feedable, Sellable {
+public class Animal implements Feedable, Sellable {
     public static final Double DEFAULT_ANIMAL_WEIGHT = 1.0;
     public static final Double DEFAULT_DOG_WEIGHT = 6.0;
     public static final Double DEFAULT_CAT_WEIGHT = 2.0;
