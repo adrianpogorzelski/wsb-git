@@ -2,6 +2,8 @@ package creatures;
 import devices.Car;
 import devices.Phone;
 
+import java.time.LocalDateTime;
+
 public class Human extends Animal {
     public static final Integer DEFAULT_GARAGE_SIZE = 2;
     public String firstName;
@@ -10,6 +12,7 @@ public class Human extends Animal {
     public Car[] garage;
     public Phone phone;
     public Double cash;
+    public Double salary;
 
     public Human(String firstName, Animal pet, Double cash) {
         super("homo sapiens", 50.0);
@@ -25,6 +28,24 @@ public class Human extends Animal {
         this.pet = pet;
         this.cash = cash;
         this.garage = new Car[numberOfCars];
+        this.salary = 3000.00;
+    }
+
+    public double getSalary() {
+        LocalDateTime lastAccessed = LocalDateTime.now();
+        System.out.println("W dniu " + lastAccessed + " pensja wynosiła " + this.salary);
+        return this.salary;
+    }
+
+    public void setSalary(double salary) {
+        if (salary < 0) {
+            System.out.println("Ujemna wartość!");
+            return;
+        }
+        System.out.println("Zaksięgowano dzisiaj rano!");
+        System.out.println("Należy udać się do p. Hani z kadr po aneks!");
+        System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu!");
+        this.salary = salary;
     }
 
     public Car getCar(Integer parkingNumber) {

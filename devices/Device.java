@@ -11,12 +11,12 @@ public abstract class Device {
         this.model = model;
     }
 
-    void turnOn() {
+    public void turnOn() {
         System.out.println("naciśnij przycisk");
         System.out.println("czekaj");
         System.out.println("czekaj");
         System.out.println("czekaj");
-        System.out.println("o! mój telefon " + producer + " działa!");
+        System.out.println("o! " + producer + model + " działa!");
     }
 
 }

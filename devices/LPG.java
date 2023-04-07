@@ -9,7 +9,7 @@ public class LPG extends Car {
     }
 
     @Override
-    public void refuel() {
+    public  void refuel() {
         System.out.println("Podłącz... itd.");
     }
     public void turnOn() {
