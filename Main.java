@@ -1,9 +1,10 @@
-import creatures.Animal;
-import creatures.Human;
-import devices.*;
+import creatures.FoodType;
+import creatures.Pet;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+
+        /*
 
         // Zadanie 0
         // https://github.com/adrianpogorzelski/wsb-git/commit/492e866cca14e7fecf14c24fb0567f62ee80cc51
@@ -86,5 +87,24 @@ public class Main {
         }
 
         // Zadanie 13
+
+
+        */
+
+        Pet dog = new Pet("pies", 5.0);
+        System.out.println(dog.getWeight());
+
+        dog.feed(0.5, FoodType.MEAT);
+        System.out.println(dog.getWeight());
+
+        dog.feed(0.5, FoodType.VEGETABLES);
+        System.out.println(dog.getWeight());
+
+        dog.feed(0.5, FoodType.SUGAR);
+        System.out.println(dog.getWeight());
+
+        dog.feed(0.5, FoodType.MIXED);
+        System.out.println(dog.getWeight());
+
     }
 }

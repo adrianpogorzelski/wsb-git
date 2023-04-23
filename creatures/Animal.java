@@ -49,8 +49,12 @@ public class Animal implements Feedable, Sellable {
     }
 
     public void feed(Double foodWeight) {
+        this.feed(foodWeight, FoodType.MIXED);
+    }
+
+    public void feed(Double foodWeight, FoodType foodType) {
         if (isAlive) {
-            weight += (foodWeight * 0.3);
+            weight += foodWeight * foodType.nutritionRatio;
             System.out.println("dzięki za żarcie :) ");
         } else {
             System.out.println("trochę za późno :|");

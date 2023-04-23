@@ -3,7 +3,6 @@ package devices;
 import creatures.Human;
 
 import java.util.LinkedList;
-import java.util.List;
 
 public abstract class Car extends Device {
     public static final Human salon = new Human("Salon", null, 0.0, 10);

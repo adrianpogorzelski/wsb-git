@@ -1,6 +1,5 @@
 package devices;
 
-import java.sql.SQLOutput;
 import java.util.List;
 
 public class Phone extends Device {
@@ -8,6 +7,7 @@ public class Phone extends Device {
     public Boolean isAndroid;
     private static final Double DEFAULT_APP_VERSION = 1.0;
     private static final String DEFAULT_APP_SERVER = "https://randomappserver.com/";
+    public static final OperatingSystem OPERATING_SYSTEM = null;
 
     public Phone(Integer id, String producer, String model, Double screenSize) {
         super(id, producer, model);
